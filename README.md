@@ -1,4 +1,6 @@
-"# .netcore-learning"
+# ----------------------------------
+# *my experience .netcore-learning*
+# ----------------------------------
 
 # Basic Web API Routing
 ```csharp
@@ -43,11 +45,11 @@ public class UserController: Controller
 }
 ```
 + Result :
-    * Default Routing is : /api/user (all endpoints without sub route)
-    * Default method of endpoint is POST (test1 without [HttpPost] header)
-    * curl GET api/user 
-        - show error because two endpoints is same route
-        - resolve by naming route endpoint, ensure each endpoint has only one route, e.g :
+    * Default Routing is : **/api/user** (because all endpoints without sub route)
+    * Default method of endpoint is POST (because only one endpoint **test1** without *[**HttpPost**]* header)
+    * **curl GET api/user**
+        - Show error because two endpoints is same route
+        - Resolve by naming route endpoints, ensure each endpoint has only one route, e.g :
             ```csharp
                 // api/user/test2
                 [HttpGet("test2")]
@@ -57,8 +59,8 @@ public class UserController: Controller
                 public string test3() => "{\"test3\":3333}";
             ``` 
 
-    * curl POST api/user 
-        reuturn **{\"test1\":1111}**
+    * **curl POST api/user**
+        - reuturn **{\"test1\":1111}**
 
 # Get params with Binding feature of .netcore 
 
